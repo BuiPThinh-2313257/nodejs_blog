@@ -1,0 +1,12 @@
+
+const express = require('express')
+const router = express.Router()
+
+const searchController = require('../app/controller/search.controller')
+
+router.use('/', searchController.index)
+
+module.exports = router
+
+
+
