@@ -1,11 +1,11 @@
-const searchRouter = require('./search.route')
+const searchRouter = require("./search.route");
 
 function routes(app) {
-    app.get('/', (req, res) => {
-        return res.render('home')
-    })
+  app.get("/", (req, res) => {
+    return res.render("home");
+  });
 
-    app.use('/search', searchRouter)
+  app.use("/search", searchRouter);
 }
 
-module.exports = routes
+module.exports = routes;
