@@ -1,11 +1,9 @@
+const homeController = require("../app/controller/home.controller");
 const searchRouter = require("./search.route");
 
 function routes(app) {
-  app.get("/", (req, res) => {
-    return res.render("home");
-  });
-
   app.use("/search", searchRouter);
+  app.use("/", homeController.index);
 }
 
 module.exports = routes;
